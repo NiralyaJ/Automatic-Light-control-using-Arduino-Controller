@@ -6,7 +6,7 @@ To design and simulate automatic light controller using LDR and Arduino UNO cont
 
 ## Software required:
 Arduino IDE </br>
-Proteous
+Proteous 
 
 ## PROCEDURE:
 ### Arduino IDE
