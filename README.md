@@ -59,14 +59,74 @@ Overall, this circuit diagram showcases how the Arduino, LDR, ADC, relay, and tr
 
 LDR Features of LDR are as follows: 
 
-1. High reliability. 2. Light weight. 3. Wide spectral response. 4. Wide ambient temperature range.
+1. High reliability.
+2.  Light weight.
+3. Wide spectral response.
+4.Wide ambient temperature range.
 
 
 ## PROGRAM:
+```
+int sensorPin = A0;
 
+int sensorValue = 0; 
+
+int led = 13;
+
+void setup() { 
+
+pinMode(led, OUTPUT);
+
+Serial.begin(9600); }
+
+void loop()
+
+{
+
+sensorValue = analogRead(sensorPin);
+
+Serial.println(sensorValue);
+
+if (sensorValue < 100)
+
+{
+
+Serial.println("LED light on");
+
+digitalWrite(led,HIGH);
+
+delay(1000);
+
+}
+
+else
+
+{
+
+digitalWrite(led,LOW);
+
+Serial.println("LED light off");
+
+delay(1000);
+
+}
+
+}
+```
 ## CIRCUIT DIAGRAM:
+<img width="1041" height="533" alt="Screenshot 2025-09-28 124108" src="https://github.com/user-attachments/assets/9334d7cb-d7cc-48ca-aaac-89e5b1abbc48" />
+
 
 ## OUTPUT:
 
+## LED ON TIME:
+
+<img width="1036" height="506" alt="Screenshot 2025-09-28 124145" src="https://github.com/user-attachments/assets/0a4b3f51-2580-4f24-809e-03d9d2aac08f" />
+
+## LED OFF TIME:
+
+<img width="1036" height="497" alt="Screenshot 2025-09-28 124124" src="https://github.com/user-attachments/assets/c7852035-2864-43c0-b05b-0debdb9bc83a" />
+
 ## RESULT:
+
 Thus the automatic light controller was designed and simulated using LDR and Arduino UNO controller.
